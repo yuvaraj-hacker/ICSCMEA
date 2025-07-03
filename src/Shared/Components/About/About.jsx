@@ -1,46 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import LastSection from '../Last/LastSection'
+import Marquee from 'react-fast-marquee'
 
 function About() {
   return (
     <>
-
-      <section className="flex flex-col  md:gap-10 gap-5  max-w-[80rem]  md:py-10 py-5 mx-auto md:px-5 px-3   items-center justify-center">
-        <section className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-3 items-center">
-          <div className=' flex flex-col md:gap-5 gap-3'>
-            <h1 className=" text-center font-semibold text-[#269C52] lg:text-2xl text-lg">
-              About the Conference
-            </h1>
-            <div className="flex flex-col gap-5 ">
-              {/* <p className="text-justify md:text-base text-sm leading-7">
-                The International Conference on Big Data and Cloud Computing (ICBDCC) serves as a premier global platform for researchers, academicians, industry practitioners, and students to exchange ideas, innovations, and research outcomes in the fields of Big Data, Cloud Computing, and their emerging applications.
-              </p> */}
-              <p className="text-justify md:text-base text-sm leading-7">
-                This conference aims to foster interdisciplinary collaboration and advance the state-of-the-art in data-driven technologies. It provides a vibrant environment to explore current challenges, share novel solutions, and discuss future directions across a wide spectrum of topics including artificial intelligence, machine learning, Internet of Things (IoT), edge and fog computing, cybersecurity, and data analytics.
-              </p>
-              <div className='mx-auto flex items-center bg-[#269C52] text-white w-fit md:p-4 p-3 gap-2 rounded-xl'>
-                <i className="fi fi-ss-earth-americas flex items-center md:text-3xl text-xl"></i>
-                <p className="md:text-base text-sm">Location <br />Beijing, China</p>
+      <section className='bg-white/96'>
+        <section className="relative  h-[calc(100dvh-800px)] w-full overflow-hidden bg-gradient-to-r from-[#0D6743] to-[#033D2D]  " >
+          <img className="absolute -top-20 -left-20 2xl:block hidden" src="public/assets/Images/point.png" alt="" />
+          <div className="absolute top-0 left-0 h-full w-full z-0 bg-[url('/assets/Images/Herosec.png')] opacity-20" ></div>
+        </section>
+        <section className=" ">
+          <section className="max-w-[90rem] relative  mx-auto md:px-5 px-3">
+            <div className="p-20 bg-[#4AF8BA] w-fit rounded-b-full absolute -top-5 rounded-tr-4xl">
+              <p className="text-center w-fit   rounded-full   font-semibold lg:text-3xl text-lg">About </p>
+              <div className="p-2.5 rounded-t-full bg-[#02c07d] top-0 absolute z-20 -left-5">
+              </div>
+              <div className="p-2.5  z-10 rounded-tl-xl bg-[#4AF8BA] top-0 absolute -left-4.5">
               </div>
             </div>
-          </div>
-          <div className="rounded-xl overflow-hidden">
-            <img className="h-64 sm:h-80 w-full object-cover" rel="preload" src="/assets/Images/footer.jpg" alt="Conference Visual" />
-          </div>
+            <section className="grid xl:grid-cols-5 grid-cols-1 md:gap-5 gap-3 items-center ">
+              <div className='col-span-1'>
+              </div>
+              <div className='flex flex-col md:gap-4 gap-2 col-span-4 my-10  '>
+                <div className="text-justify md:text-lg text-sm leading-7 flex flex-col gap-4">
+                  <p className="">
+                    The International Conference on Smart Computational Methods and Emerging Applications (ICSCMEA 2025) is a prestigious global forum designed to advance the frontiers of intelligent computational technologies and their real-world implementations. Set against the backdrop of rapid technological evolution, this conference offers a vital platform for scholars, engineers, scientists, technocrats, and industry professionals to share their pioneering ideas, research outcomes, and experiences.                  </p>
+                </div>
+              </div>
+            </section>
+          </section>
         </section>
-        <section className="">
-          <div className="mx-auto text-justify text-gray-700 space-y-4 text-sm md:text-base leading-7">
-            <p className='leading-7'>
-              The International Conference on Intelligent Systems and Computational Methods (ICISCM) focuses on the latest innovations, research, and applications in intelligent systems and computational techniques. The conference welcomes contributions in areas such as artificial intelligence, machine learning, data science, optimization, automation, soft computing, and high-performance computing. It aims to provide a platform for academic and industry experts to share knowledge and advance the development of smart, adaptive, and efficient solutions to complex problems.
-            </p>
-          </div>
-        </section>
-
+        <LastSection />
       </section>
-
-
-      <LastSection />
 
     </>
   )

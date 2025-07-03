@@ -27,7 +27,8 @@ function Approuter() {
         <Routes>
           <Route element={<Main />}>
             <Route path="/" element={<Homes />} />
-            {/* <Route path="/about" element={<Abouts />} />
+            <Route path="/about" element={<Abouts />} />
+            {/*
             <Route path="/scope" element={<AimScopePage />} />
             <Route path="/organizing-committee" element={<EditorialPage />} />
             <Route path="/editorial-board" element={<IssuePage />} />

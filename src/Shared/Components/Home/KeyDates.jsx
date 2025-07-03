@@ -21,18 +21,20 @@ import React from 'react';
 
 function KeyDates({ Dates, Title }) {
     return (
-        <section className="relative bg-white p-4 rounded-xl shadow-lg group transition-transform hover:scale-[1.02] overflow-hidden">
-            <div className="flex items-center gap-5 z-10 relative  h-full ">
-                <div className="  text-[#1B1F3B] font-semibold p-5 bg-[#269C52] rounded-full text-sm md:text-base  whitespace-nowrap">
-                    <i className="fi fi-sr-calendar flex items-center text-white text-3xl"></i>
+        <>
+            <section className='grid grid-cols-5 items-center'>
+                {/* <div className={` bg-[#033D2D] col-span-4  text-white rounded-xl p-10  ${index % 2 === 0 ? 'order-2 md:order-1' : 'order-2 md:order-2'}`}> */}
+                    <div className="flex items-center gap-5 z-10   h-full ">
+                        <div className="md:text-base text-sm font-medium flex flex-col gap-5">
+                            {Title}
+                        </div>
+                    </div>
+                {/* </div> */}
+                <div className='bg-[#4AF8BA] py-5 col-span-1 h-fit rounded-tr-3xl rounded-br-3xl '>
+                            <p className="">{Dates}</p>
                 </div>
-                <div className="md:text-base text-sm font-medium flex flex-col gap-5">
-                    <p className="">{Dates}</p>
-                    {Title}
-                </div>
-            </div>
-            <div className="absolute top-0 right-0 w-20 h-20 bg-[#269C52] rounded-bl-full transform translate-x-6 -translate-y-6 -hover:scale-110 transition-transform duration-500"></div>
-        </section>
+            </section>
+        </>
     );
 }
 

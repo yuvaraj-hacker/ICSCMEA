@@ -7,6 +7,16 @@ const Header = () => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const dropdownRef = useRef(null);
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const isActive = (path) => {
     if (location.pathname === path) {
       return true;
@@ -80,12 +90,13 @@ const Header = () => {
   return (
     <>
       <section className="bg-primary">
-        <div className="max-w-[80rem] mx-auto md:px-5 px-3 md:py-0 py-2 bg-[#56AE58] border-b-black  border-b">
+        <div className="max-w-[80rem] mx-auto md:px-5 px-3 md:py-0 py-2 bg-gradient-to-r from-[#0D6743] to-[#033D2D]  ">
           <div className="flex items-center justify-between lg:gap-0  gap-5  ">
             <Link to='/'>
               <div className="md:hidden block   ">
-                <img className='w-32 h-14 object-contain' src="/assets/Images/ICISCM.png" alt="" />
+                {/* <img className='w-32 h-14 object-contain' src="/assets/Images/ICISCM.png" alt="" /> */}
                 {/* <img className='w-40' src="/assets/Images/ICBDCC.png" alt="" /> */}
+                <div className=" font-bold md:hidden block text-white text-2xl">ICSCMEA</div>
               </div>
             </Link>
             <div className={`md:hidden block  ${menuOpen ? "z-50" : ""}`}>
@@ -126,7 +137,7 @@ const Header = () => {
       </div> */}
       <section
         // className={`md:bg-white  md:border-b-4  border-b-[#14AE5C]  ${menuOpen ? " block" : " md:block hidden"}`}
-        className={` fixed top-0 right-0 h-full w-64 z-40 bg-transparent   ${menuOpen ? "translate-x-0 duration-300" : "translate-x-full duration-300"} md:block md:relative md:w-auto md:translate-x-0`} >
+        className={` fixed -top-1 right-0 h-full w-64 z-40 bg-transparent  ${scrolled ? "bg-gradient-to-r from-[#0D6743] to-[#033D2D]" : " "}  ${menuOpen ? "translate-x-0 duration-300" : "translate-x-full duration-300"} md:block md:relative md:w-auto md:translate-x-0`} >
         <header className="max-w-[90rem] mx-auto md:px-5 px-2 h-full py-1 ">
           <div className="flex md:justify-between justify-center items-center ">
             <Link to='/'>

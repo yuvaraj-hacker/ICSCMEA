@@ -90,7 +90,7 @@ export const Home = () => {
   return (
     <>
       <section className="relative lg:h-[calc(100dvh-30px)] w-full overflow-hidden bg-gradient-to-r from-[#0D6743] to-[#033D2D]  " >
-        <img className="absolute -top-20 -left-20" src="public/assets/Images/point.png" alt="" />
+        <img className="absolute -top-20 -left-20 2xl:block hidden" src="public/assets/Images/point.png" alt="" />
         <div className="absolute top-0 left-0 h-full w-full z-0 bg-[url('/assets/Images/Herosec.png')] opacity-20" ></div>
         <div className="py-20 flex  flex-col justify-center   2xl:gap-20 xl:gap-10 gap-5 h-full">
           <div className="relative md:py-5 py-3 bg-[#4AF8BA] 2xl:w-1/2 w-3/4 rounded-tr-full rounded-br-full">
@@ -113,47 +113,60 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      {/* <section className="bg-[#A6D8A7]">
-        <section className="max-w-[90rem] pt-5 md:pt-10 mx-auto md:px-5 px-3">
-          <section className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-3 items-start">
-            <div className='flex flex-col md:gap-4 gap-2'>
-              <h1 className="text-center w-fit mx-auto rounded-full   font-semibold lg:text-2xl text-lg">
-                About the Conference
-              </h1>
-              <p className="text-justify md:text-base text-sm leading-7">Step into the future of intelligent technologies at the International Conference on Intelligent Systems and Computational Methods (ICISCM).
-                This premier global event unites researchers, academicians, industry experts, and students to explore innovative ideas, emerging trends, and practical applications in intelligent systems and computational techniques. ICISCM serves as a dynamic platform for presenting cutting-edge research, exchanging knowledge, and fostering collaborations that drive advancements in automation, machine learning, optimization, and real-world problem solving through computational intelligence. </p>
+      <section className=" bg-white/96">
+        <section className="max-w-[90rem] relative  mx-auto md:px-5 px-3">
+          <div className="md:p-40 p-20 bg-[#4AF8BA] w-fit rounded-b-full absolute -top-5 rounded-tr-4xl">
+            <div className="p-2.5 rounded-t-full bg-[#02c07d] top-0 absolute z-20 -left-5">
             </div>
-            <div className=" flex flex-col md:gap-4 gap-2">
-              <h1 className="text-center w-fit mx-auto rounded-full   font-semibold lg:text-2xl text-lg">
-                Scope of Conference
-              </h1>
-              <p className="text-justify md:text-base text-sm leading-7">
-                Join us at the International Conference on Intelligent Systems and Computational Methods (ICISCM) — a premier forum that brings together a global community of researchers, academicians, industry professionals, and students to delve into the latest developments in intelligent technologies and computational strategies. This event is designed to foster impactful collaborations, encourage innovative thinking, and highlight pioneering research that addresses theoretical foundations and real-world applications across areas such as machine learning, optimization, data analytics, automated decision-making, and complex system modeling.
-              </p>
-            </div>
-          </section>
-          <div className="flex justify-center mt-10 ">
-            <div className="bg-white w-fit p-10  flex items-center gap-4 rounded-t-xl relative top-2 overflow-hidden">
-              <i className="fi fi-ss-earth-americas flex items-center text-3xl text-[#2457c5]"></i>
-              <p className="md:text-xl">Location :<br />
-                Beijing, China</p>
-              <div className="absolute top-0 right-0 w-20 h-20 bg-[#269C52] rounded-bl-full transform translate-x-6 -translate-y-6 -hover:scale-110 transition-transform duration-500"></div>
+            <div className="p-2.5  z-10 rounded-tl-xl bg-[#4AF8BA] top-0 absolute -left-4.5">
             </div>
           </div>
+          <section className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-3  ">
+            <div className="z-10">
+              <img src="/assets/Images/aboutsection.png" className="md:w-[500px] w-[200px] md:mx-0 mx-auto " alt="" />
+            </div>
+            <div className='flex flex-col md:gap-4 gap-2  '>
+              <div className="flex gap-3 justify-center items-center">
+                <div className="bg-[#4AF8BA] p-3 rounded-full w-fit  ">
+                </div>
+                <h1 className="text-center w-fit   rounded-full   font-semibold lg:text-3xl text-lg">
+                  About
+                </h1>
+              </div>
+              <div className="text-justify md:text-lg text-sm leading-7 flex flex-col gap-4">
+                <p className="">
+                  The International Conference on Smart Computational Methods and Emerging Applications (ICSCMEA) serves as a premier interdisciplinary platform for scholars, researchers, practitioners, and educators to present and discuss the latest innovations, trends, and challenges in the field of intelligent computational systems and their transformative applications.
+                </p>
+                <p className=""> ICSCMEA 2025 aims to bring together leading minds from academia, industry, and government to exchange knowledge on the advancement of computational intelligence, data-driven methodologies, and next-generation technologies. The conference fosters collaboration across disciplines including Artificial Intelligence, Machine Learning, Data Science, Cyber-Physical Systems, Internet of Things (IoT), Quantum Computing, Robotics, Cloud and Edge Computing, and many more.
+                </p>
+              </div>
+              <div className="md:mx-0 mx-auto">
+                <Link to="/about">
+                  <button className="md:text-base text-sm relative bg-transparent border border-[#4AF8BA] rounded-full  cursor-pointer  px-6 py-2 md:py-3 " >
+                    Read More
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </section>
         </section>
       </section>
-      <section className=" pt-10 md:pt-10 flex flex-col md:gap-10  gap-10">
-        <section className="  max-w-[70rem]   mx-auto md:px-5 px-3  flex flex-col md:gap-5 gap-3">
-          <h1 className=" text-center font-semibold lg:text-2xl text-lg">
-            Key Invitees
-          </h1>
-          <div className="grid md:grid-cols-2   grid-cols-1 md:gap-10 gap-5">
+      <section className=" flex flex-col md:gap-10  gap-10 bg-white/96">
+        <section className="  max-w-[90rem]   mx-auto md:px-5 px-3  flex flex-col md:gap-5 gap-3">
+          <div className="flex gap-3 justify-center items-center">
+            <div className="bg-[#4AF8BA] p-3 rounded-full w-fit  ">
+            </div>
+            <h1 className="text-center w-fit rounded-full font-semibold lg:text-3xl text-lg">
+              Key Invitees
+            </h1>
+          </div>
+          <div className="grid md:grid-cols-4   grid-cols-2 md:gap-10 gap-5">
             {invitees.map((member, index) => (
               <Invitees key={index} Name={member.Name} Position={member.Position} location={member.location} dataAos="flip-left" />
             ))}
           </div>
         </section>
-        <section className="  max-w-[100rem]  mx-auto md:px-5 px-3  flex flex-col md:gap-5  gap-3">
+        {/* <section className="  max-w-[100rem]  mx-auto md:px-5 px-3  flex flex-col md:gap-5  gap-3">
           <h1 className=" text-center font-semibold lg:text-2xl text-lg">
             Technical Program Committee
           </h1>
@@ -162,21 +175,36 @@ export const Home = () => {
               <Technical key={index} Name={member.Name} Position={member.Position} location={member.location} dataAos="flip-left" />
             ))}
           </div>
-        </section>
-        <section className="  max-w-[100rem]  mx-auto md:px-5 px-3 ">
-          <div className="  bg-[#A6D8A7] md:p-10 p-5 rounded-3xl shadow-xl  flex flex-col md:gap-5 gap-3">
-            <h1 className="text-center mx-auto font-semibold lg:text-2xl text-lg ">
-              Key Dates
-            </h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
+        </section> */}
+        <section className="  max-w-[90rem]  mx-auto md:px-5 px-3 ">
+          <div className=" flex flex-col md:gap-5 gap-3">
+            <div className="flex gap-3 justify-center items-center">
+              <div className="bg-[#4AF8BA] p-3 rounded-full w-fit  ">
+              </div>
+              <h1 className="text-center w-fit  rounded-full   font-semibold lg:text-3xl text-lg">
+                Key Dates
+              </h1>
+            </div>
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
               {date.map((item, index) => (
-                <KeyDates key={index} Dates={item.Dates} Title={item.Title} />
+                <section key={index} className='grid grid-cols-1 md:grid-cols-5 items-center  '>
+                  <div className={`bg-[#033D2D] col-span-1 md:col-span-4 text-white rounded-xl p-10 ${index % 2 === 0 ? 'order-2 md:order-1' : 'order-2 md:order-2'}`}>
+                    <div className="flex items-center gap-5 h-full justify-center">
+                      <div className="md:text-base text-sm font-medium flex flex-col text-center gap-5">
+                        {item.Title}
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`bg-[#4AF8BA] p-4   col-span-1 font-semibold ${index % 2 === 0 ? 'order-1 md:order-2  rounded-tr-3xl rounded-br-3xl' : 'order-1 md:order-1  rounded-tl-3xl rounded-bl-3xl text-right'}`}>
+                    <p className="text-base">{item.Dates}</p>
+                  </div>
+                </section>
               ))}
             </div>
           </div>
         </section>
         <LastSection />
-      </section> */}
+      </section>
 
     </>
   );
